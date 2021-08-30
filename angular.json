@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "teams"
+    }
+  },
+  "defaultProject": "teams",
+  "cli": {
+    "analytics": false
+  }
 }

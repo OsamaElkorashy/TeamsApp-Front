@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Nationality</th>
+            <th>Birth Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of players">
+            <td>{{player.name}}</td>
+            <td>{{player.nationality}}</td>
+            <td>{{player.dateOfBirth | date}}</td>
+            <td *ngIf="_authService.isAdmin()">
+                <button (click)="delete(player.id)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
